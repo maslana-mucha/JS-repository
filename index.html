@@ -2,18 +2,43 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 	<title>Kamień, papier, nożyce</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="container">
-		<div id="buttons">
-			<button id="button-rock">Kamień</button>
-			<button id="button-paper">Papier</button>
-			<button id="button-scissors">Nożyce</button>
+	<section class="game">
+		<div class="container">
+			<div class="introduction">
+				<h1 class="game-title">kamień | papier | nożyce</h1>
+				<p class="rules">Zapewne znasz zasady tej gry, ale przypomnijmy je raz jeszcze.</p>
+				<p class="rules">Pojedyncza runda gry polega na jednoczesnym zagraniu dwóch graczy (w tym wypadku to ja jestem Twoim przeciwnikiem).</p>
+				<p class="rules">Każdy gracz może wybrać jeden z ruchów: papier, kamień, lub nożyce.</p>
+				<p class="ready">Zaczynamy?</p>
+			</div>
+			<div class="buttons" id="buttons">
+				<button class="btn" id="button-rock">Kamień</button>
+				<button class="btn" id="button-paper">Papier</button>
+				<button class="btn" id="button-scissors">Nożyce</button>
+			</div>
+			<div class="message" id="messages"></div>
+			</div>
+			<div class="counter" id="result"></div>
 		</div>
-		<div id="messages"></div>
-	</div>
+	</section>
+	<footer class="footer">
+		<div class="company-name">
+			<p>&copy; MaslanaGames Ltd.</p>
+		</div>
+		<div class="social-media">
+			<ul>
+	      <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+	      <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+	      <li><a href="#"><i class="fab fa-youtube"></i>YouTube</a></li>
+	  	</ul>
+		</div>
+	</footer>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>

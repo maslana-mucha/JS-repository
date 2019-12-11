@@ -1,0 +1,146 @@
+/* Global */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #b8e994;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+section {
+    padding: 96px 50px;
+    text-align: center;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    min-height: 100%;
+    position: relative;
+}
+.btn {
+    padding: 20px;
+    margin: 10px 10px;
+    min-width: 160px;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    border-style: none;
+    background-color: #009432;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.btn:hover {
+    background: #e67e22;
+    background-position: 0 100%;
+}
+
+.game-title {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.ready {
+  padding: 10px 0 20px 0;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.message {
+  padding: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.footer {
+  position: absolute;
+  display: inline-flex;
+  justify-content: space-between;
+  bottom:0;
+  width: 100%;
+  padding: 3px 30px;
+  background-color: #fff;
+  font-size: 14px;
+}
+.social-media ul {
+  list-style-type: none;
+}
+.social-media li {
+  display: inline;
+  font-size: 0;
+}
+.fab {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+    section {
+      padding: 10px 10px;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .btn {
+      padding: 10px 20px;
+      margin: 5px 5px;
+    }
+    .game-title {
+      font-size: 25px;
+    }
+    .rules {
+      padding: 0 10px;
+      text-align: justify;
+      font-size: 14px;
+    }
+    .ready {
+      padding: 10px 0 0 0;
+      font-size: 16px;
+    }
+    .message {
+      padding: 25px;
+      font-size: 16px;
+    }
+    .footer {
+      display: none;
+    }
+}
+@media (max-width: 321px) {
+    section {
+      padding: 5px 10px;
+    }
+    .game-title {
+      font-size: 20px;
+    }
+    .rules {
+      padding: 0 10px;
+      text-align: center;
+      font-size: 13px;
+    }
+    .ready {
+      padding: 5px 0 0 0;
+      font-size: 13px;
+    }
+    .btn {
+      font-size: 13px;
+    }
+    .message {
+      padding: 16px;
+      font-size: 14px;
+    }
+}
