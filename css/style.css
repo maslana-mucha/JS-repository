@@ -6,7 +6,6 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   background-color: #b8e994;
   font-family: sans-serif;
   font-size: 16px;
@@ -14,14 +13,13 @@ body {
 }
 
 section {
-  padding: 96px 50px;
+  padding: 0 50px;
   text-align: center;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1140px;
-  min-height: 100%;
   position: relative;
 }
 
