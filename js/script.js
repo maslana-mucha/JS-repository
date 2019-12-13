@@ -1,11 +1,6 @@
-var buttonRock;
-buttonRock = document.getElementById('button-rock');
-var buttonScissors;
-buttonScissors = document.getElementById('button-scissors');
-var buttonPaper;
-buttonPaper = document.getElementById('button-paper');
-var playerScore = 0;
-var computerScore = 0;
+const buttonRock = document.getElementById('button-rock');
+const buttonScissors = document.getElementById('button-scissors');
+const buttonPaper = document.getElementById('button-paper');
 
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
 buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
@@ -37,6 +32,10 @@ function getMoveName(argMoveId) {
     return 'kamień';
   }
 }
+
+let playerScore = 0;
+let computerScore = 0;
+
 function displayResult(argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
