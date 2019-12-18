@@ -1,23 +1,15 @@
 'use strict'
 
-let argComputerMove,
-    argMoveId,
-    argPlayerMove,
-    computerMove,
-    playerInput,
-    playerMove,
-    randomNumber;
-
 function buttonClicked(buttonType) {
   clearMessages();
   console.log(buttonType + ' został kliknięty');
 
-  playerMove = buttonType;
-  randomNumber = Math.floor(Math.random() * 3 + 1);
+  const computerMove = getMoveName(randomNumber);
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
+
   console.log('wylosowana liczba to: ' + randomNumber);
-  computerMove = getMoveName(randomNumber);
   console.log('ruch komputera to: ' + computerMove);
-  displayResult(playerMove, computerMove);
+  displayResult(buttonType, computerMove);
 }
 
 const buttonRock = document.getElementById('button-rock');
