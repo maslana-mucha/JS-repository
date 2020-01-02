@@ -3,9 +3,9 @@
 function buttonClicked(buttonType) {
   clearMessages();
   console.log(buttonType + ' został kliknięty');
-
-  const computerMove = getMoveName(randomNumber);
+  
   const randomNumber = Math.floor(Math.random() * 3 + 1);
+  const computerMove = getMoveName(randomNumber);
 
   console.log('wylosowana liczba to: ' + randomNumber);
   console.log('ruch komputera to: ' + computerMove);
