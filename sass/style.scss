@@ -1,24 +1,78 @@
+$color-first: rgb(124, 211, 233);
+$color-second: rgb(28, 170, 28);
+$color-third: rgb(196, 196, 196);
+
+$font-text: 'Montserrat',
+sans-serif;
 /* Global */
-*, *::before, *::after {
-    box-sizing: border-box;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #b8e994;
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
+  font-family: $font-text;
+  font-size: 16px;
+  text-align: center;
 }
 section {
-    padding: 0 50px;
-    text-align: center;
+  height: 100vh;
 }
+
+/* Section Intro */
+.intro {
+  background-color: #000;
+  color: black;
+  background-image: url(https://i.postimg.cc/GhqqwmjN/sn-rockpaper.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h2 {
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  a {
+    display: block;
+    margin-top: 16px;
+    line-height: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  i {
+    width: 50px;
+    transition: .3s;
+  }
+
+  a:hover i {
+    color: green;
+  }
+}
+
+/* Section Rules */
 .container {
-    margin: 0 auto;
-    max-width: 1140px;
-    position: relative;
+
+  h1 {
+    padding: 30px;
+    text-transform: uppercase;
+  }
+  p {
+    padding: 10px 0;
+  }
 }
+
+
+/* Section Game */
 .btn {
     padding: 20px;
     margin: 10px 10px;
@@ -56,89 +110,4 @@ section {
   font-weight: 600;
   text-transform: uppercase;
 }
-.footer {
-  position: absolute;
-  display: inline-flex;
-  justify-content: space-between;
-  bottom:0;
-  width: 100%;
-  padding: 3px 30px;
-  background-color: #fff;
-  font-size: 14px;
-}
-.social-media ul {
-  list-style-type: none;
-}
-.social-media li {
-  display: inline;
-  font-size: 0;
-}
-.fab {
-  margin-left: 10px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 50%;
-  background-color: black;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-}
 
-@media (max-width: 767px) {
-    section {
-      padding: 10px 10px;
-    }
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .btn {
-      padding: 10px 20px;
-      margin: 5px 5px;
-    }
-    .game-title {
-      font-size: 25px;
-    }
-    .rules {
-      padding: 0 10px;
-      text-align: justify;
-      font-size: 14px;
-    }
-    .ready {
-      padding: 10px 0 0 0;
-      font-size: 16px;
-    }
-    .message {
-      padding: 25px;
-      font-size: 16px;
-    }
-    .footer {
-      display: none;
-    }
-}
-@media (max-width: 321px) {
-    section {
-      padding: 5px 10px;
-    }
-    .game-title {
-      font-size: 20px;
-    }
-    .rules {
-      padding: 0 10px;
-      text-align: center;
-      font-size: 13px;
-    }
-    .ready {
-      padding: 5px 0 0 0;
-      font-size: 13px;
-    }
-    .btn {
-      font-size: 13px;
-    }
-    .message {
-      padding: 16px;
-      font-size: 14px;
-    }
-}

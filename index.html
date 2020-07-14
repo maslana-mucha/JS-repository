@@ -3,32 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 	<title>RockPaperScissors</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<section class="game">
-		<div class="container">
-			<div class="introduction">
-				<h1 class="game-title">Rock Paper Scissors</h1>
-			</div>
-			<div class="rules">
-				<p>Remember the rules?</p>
-				<button>Show me</button>
-				<p>A player who decides to play rock will beat another player who has chosen scissors ("rock crushes scissors" or sometimes
-				"blunts scissors"[1]), but will lose to one who has played paper ("paper covers rock"); a play of paper will lose to a
-				play of scissors ("scissors cuts paper"). If both players choose the same shape, the game will be replayed.</p>
-			</div>
-			<div class="buttons" id="buttons">
-				<button class="btn" id="button-rock">Rock</button>
-				<button class="btn" id="button-paper">Paper</button>
-				<button class="btn" id="button-scissors">Scissors</button>
-			</div>
-			<div class="message" id="messages"></div>
-			</div>
-			<div class="counter" id="result"></div>
+	<section class="intro">
+		<div class="introduction">
+			<h1 class="game-title">Rock, Paper, Scissors</h1>
+			<h2>Try your luck playing against the computer</h2>
+			<a href="#">
+				<i class="fas fa-play-circle"></i><span>Play the game</span></a>
 		</div>
+	</section>
+	<section class="rules">
+		<div class="container">
+			<h1>Game Rules</h1>
+			<!--<p>Each player choose one of three shapes. These shapes are "rock", "paper" and "scissors".</p>-->
+			<div>
+				<p>Rock <span>crushes</span> Scissors</p>
+				<p>Paper <span>covers</span> Rock</p>
+				<p>Scissors <span>cuts</span> Paper</p>
+			</div>
+		</div>
+	</section>
+	<section class="game">
+		<div class="buttons" id="buttons">
+			<button class="btn" id="button-rock">Rock</button>
+			<button class="btn" id="button-paper">Paper</button>
+			<button class="btn" id="button-scissors">Scissors</button>
+		</div>
+		<div class="message" id="messages"></div>
+		<div class="counter" id="result"></div>
 	</section>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
