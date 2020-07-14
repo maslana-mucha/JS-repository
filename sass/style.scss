@@ -1,6 +1,6 @@
 $color-first: rgb(124, 211, 233);
-$color-second: rgb(28, 170, 28);
-$color-third: rgb(196, 196, 196);
+$color-success: rgb(28, 170, 28);
+$color-warning: rgb(163, 7, 7);
 
 $font-text: 'Montserrat',
 sans-serif;
@@ -16,13 +16,13 @@ body {
   text-align: center;
 }
 section {
-  height: 100vh;
+  padding: 96px 0;
+  background-color: #fff;
 }
 
 /* Section Intro */
 .intro {
-  background-color: #000;
-  color: black;
+  height: 90vh;
   background-image: url(https://i.postimg.cc/GhqqwmjN/sn-rockpaper.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -43,55 +43,73 @@ section {
     display: block;
     margin-top: 16px;
     line-height: 30px;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
     text-transform: uppercase;
     color: black;
   }
 
   i {
-    width: 50px;
     transition: .3s;
   }
 
+  span {
+    padding-left: 16px;
+  }
+
   a:hover i {
-    color: green;
+    color: $color-success;
   }
 }
 
 /* Section Rules */
 .container {
+  margin: 0 auto;
 
   h1 {
     padding: 30px;
     text-transform: uppercase;
   }
-  p {
-    padding: 10px 0;
+  p, span {
+    color: black;
+    font-weight: 400;
+    line-height: 50px;
+    transition: all 0.3s 0s ease;
+  }
+
+  p:hover span {
+    color: $color-warning;
+    font-weight: 600;
   }
 }
 
 
 /* Section Game */
+.game {
+  h1 {
+    font-style: italic;
+  }
+}
+.buttons {
+  border: 1px solid black;
+}
 .btn {
-    padding: 20px;
-    margin: 10px 10px;
-    min-width: 160px;
+    width: 100px;
+    height: 100px;
     display: inline-block;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff;
+    color: black;
     cursor: pointer;
-    border-style: none;
-    background-color: #009432;
-    border-radius: 5px;
+    border-radius: 50%;
+    background-color: $color-success;
+    outline: none;
     transition: all 0.2s;
 }
 .btn:hover {
-    background: #e67e22;
-    background-position: 0 100%;
+    background: #db7b27;
 }
 
 .game-title {

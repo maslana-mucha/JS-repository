@@ -13,13 +13,13 @@
 		<div class="introduction">
 			<h1 class="game-title">Rock, Paper, Scissors</h1>
 			<h2>Try your luck playing against the computer</h2>
-			<a href="#">
+			<a href="#game">
 				<i class="fas fa-play-circle"></i><span>Play the game</span></a>
 		</div>
 	</section>
 	<section class="rules">
 		<div class="container">
-			<h1>Game Rules</h1>
+			<h1>before we start... Game Rules</h1>
 			<!--<p>Each player choose one of three shapes. These shapes are "rock", "paper" and "scissors".</p>-->
 			<div>
 				<p>Rock <span>crushes</span> Scissors</p>
@@ -28,14 +28,18 @@
 			</div>
 		</div>
 	</section>
-	<section class="game">
+	<section class="game" id="game">
+		<div class="round"></div>
+		
 		<div class="buttons" id="buttons">
-			<button class="btn" id="button-rock">Rock</button>
-			<button class="btn" id="button-paper">Paper</button>
-			<button class="btn" id="button-scissors">Scissors</button>
+			<i class="fas fa-hand-rock" id="button-rock"></i>
+			<i class="fas fa-hand-paper" id="button-paper"></i>
+			<i class="fas fa-hand-scissors" id="button-scissors"></i>
 		</div>
+		
 		<div class="message" id="messages"></div>
 		<div class="counter" id="result"></div>
+		
 	</section>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
