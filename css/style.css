@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   text-align: center;
 }
@@ -74,41 +74,74 @@ section {
   height: 100vh;
 }
 
-.rules {
+.rules-left {
   position: absolute;
-  top: 100vh;
-  right: 0;
+  top: calc(200vh + 60px);
+  left: calc(100vw + 60px);
 }
 
-i {
-  width: 70px;
-  height: 70px;
+.rules-right {
+  position: absolute;
+  top: calc(200vh + 60px);
+  right: calc(100vw + 60px);
 }
 
-.btn {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-  cursor: pointer;
+div.rules > button {
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
-  background-color: #1caa1c;
-  outline: none;
+  background-color: yellowgreen;
+}
+
+.buttons {
+  width: 100%;
+  height: 30vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  cursor: pointer;
   transition: all 0.2s;
 }
 
-.btn:hover {
-  background: #db7b27;
+.buttons i {
+  margin: 0 30px;
+  font-size: 50px;
+  color: white;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: .3s;
+}
+
+.buttons i:hover {
+  transform: scale(1.1);
+}
+
+.buttons i:active {
+  transform: scale(1.1);
+  background-color: orange;
+}
+
+.buttons i:visited {
+  background-color: orange;
 }
 
 .message {
   padding: 40px;
+  line-height: 40px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

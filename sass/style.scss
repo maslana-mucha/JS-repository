@@ -2,8 +2,6 @@ $color-first: rgb(124, 211, 233);
 $color-success: rgb(28, 170, 28);
 $color-warning: rgb(163, 7, 7);
 
-$font-text: 'Montserrat',
-sans-serif;
 /* Global */
 *{
   margin: 0;
@@ -11,7 +9,9 @@ sans-serif;
   box-sizing: border-box;
 }
 body {
-  font-family: $font-text;
+  font-family: 'Montserrat',
+  sans-serif;
+  ;
   font-size: 16px;
   text-align: center;
 }
@@ -75,45 +75,66 @@ section {
 .game {
   height: 100vh;
 }
-
-.rules {
+.rules-left {
   position: absolute;
-  top: 100vh;
-  right: 0;
+  top: calc(200vh + 60px);
+  left: calc(100vw + 60px);
+}
+.rules-right {
+  position: absolute;
+  top: calc(200vh + 60px);
+  right: calc(100vw + 60px);
+}
 
-  button {
-    
+div.rules > button {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: yellowgreen;
+}
+
+.buttons {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  
+  i {
+    margin: 0 30px;
+    font-size: 50px;
+    color: white;
+    background-color: yellowgreen;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: .3s;
   }
   
-}
-
-i {
-  width: 70px;
-  height: 70px;
-}
-.btn {
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: $color-success;
-    outline: none;
-    transition: all 0.2s;
-}
-.btn:hover {
-    background: #db7b27;
+  i:hover {
+    transform: scale(1.1);
+  }
+  i:active {
+    transform: scale(1.1);
+    background-color: orange;
+  }
+  i:visited {
+    background-color: orange;
+  }
 }
 
 .message {
   padding: 40px;
+  line-height: 40px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
