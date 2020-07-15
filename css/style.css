@@ -18,7 +18,7 @@ section {
 
 /* Section Intro */
 .intro {
-  height: 90vh;
+  height: 100vh;
   background-image: url(https://i.postimg.cc/GhqqwmjN/sn-rockpaper.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -32,62 +32,57 @@ section {
 }
 
 .introduction h2 {
-  padding: 8px 0;
-  font-size: 16px;
+  padding: 12px 0;
+  font-size: 18px;
   font-weight: normal;
 }
 
+.introduction h2 > span {
+  color: yellowgreen;
+}
+
 .introduction a {
-  display: block;
-  margin-top: 16px;
-  line-height: 30px;
-  font-size: 20px;
+  display: inline-block;
+  margin: 20px auto 0 auto;
   text-decoration: none;
+  transition: .4s;
+}
+
+.introduction a span {
+  display: none;
+  font-size: 20px;
   text-transform: uppercase;
   color: black;
 }
 
-.introduction i {
+.introduction a i {
+  font-size: 50px;
+  color: yellowgreen;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  transform: scale(1);
   transition: .3s;
 }
 
-.introduction span {
-  padding-left: 16px;
-}
-
-.introduction a:hover i {
-  color: #1caa1c;
-}
-
-/* Section Rules */
-.container {
-  margin: 0 auto;
-}
-
-.container h1 {
-  padding: 30px;
-  text-transform: uppercase;
-}
-
-.container p, .container span {
-  color: black;
-  font-weight: 400;
-  line-height: 50px;
-  transition: all 0.3s 0s ease;
-}
-
-.container p:hover span {
-  color: #a30707;
-  font-weight: 600;
+.introduction a i:hover {
+  transform: scale(1.1, 1.1);
 }
 
 /* Section Game */
-.game h1 {
-  font-style: italic;
+.game {
+  height: 100vh;
 }
 
-.buttons {
-  border: 1px solid black;
+.rules {
+  position: absolute;
+  top: 100vh;
+  right: 0;
+}
+
+i {
+  width: 70px;
+  height: 70px;
 }
 
 .btn {
@@ -108,18 +103,6 @@ section {
 
 .btn:hover {
   background: #db7b27;
-}
-
-.game-title {
-  font-size: 30px;
-  text-transform: uppercase;
-}
-
-.ready {
-  padding: 10px 0 20px 0;
-  font-weight: 600;
-  font-size: 20px;
-  text-transform: uppercase;
 }
 
 .message {

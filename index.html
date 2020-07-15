@@ -12,25 +12,14 @@
 	<section class="intro">
 		<div class="introduction">
 			<h1 class="game-title">Rock, Paper, Scissors</h1>
-			<h2>Try your luck playing against the computer</h2>
+			<h2>Try your <span>luck</span> playing against the computer</h2>
 			<a href="#game">
-				<i class="fas fa-play-circle"></i><span>Play the game</span></a>
-		</div>
-	</section>
-	<section class="rules">
-		<div class="container">
-			<h1>before we start... Game Rules</h1>
-			<!--<p>Each player choose one of three shapes. These shapes are "rock", "paper" and "scissors".</p>-->
-			<div>
-				<p>Rock <span>crushes</span> Scissors</p>
-				<p>Paper <span>covers</span> Rock</p>
-				<p>Scissors <span>cuts</span> Paper</p>
-			</div>
+				<i class="fas fa-play-circle"></i>
+			</a>
 		</div>
 	</section>
 	<section class="game" id="game">
-		<div class="round"></div>
-		
+		<h1>Choose the button</h1>
 		<div class="buttons" id="buttons">
 			<i class="fas fa-hand-rock" id="button-rock"></i>
 			<i class="fas fa-hand-paper" id="button-paper"></i>
@@ -39,6 +28,22 @@
 		
 		<div class="message" id="messages"></div>
 		<div class="counter" id="result"></div>
+		<div class="rules">
+			<button id="btn">
+				<i class="fas fa-exclamation"></i>
+			</button>
+			<ul id="list">
+				<li>Rock <span>crushes</span> Scissors</li>
+				<li>Paper <span>covers</span> Rock</li>
+				<li>Scissors <span>cuts</span> Paper</li>
+			</ul>
+		</div>
+		<div class="info">
+			<button id="btn">
+				<i class="fas fa-info"></i>
+			</button>
+			<span>Each player choose one of three shapes. These shapes are "rock", "paper" and "scissors".</span>
+		</div>
 		
 	</section>
 	<script src="js/functions.js"></script>

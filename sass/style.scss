@@ -22,7 +22,7 @@ section {
 
 /* Section Intro */
 .intro {
-  height: 90vh;
+  height: 100vh;
   background-image: url(https://i.postimg.cc/GhqqwmjN/sn-rockpaper.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -34,64 +34,62 @@ section {
   transform: translate(-50%, -50%);
 
   h2 {
-    padding: 8px 0;
-    font-size: 16px;
+    padding: 12px 0;
+    font-size: 18px;
     font-weight: normal;
+  }
+  h2 > span {
+    color: yellowgreen;
   }
 
   a {
-    display: block;
-    margin-top: 16px;
-    line-height: 30px;
-    font-size: 20px;
+    display: inline-block;
+    margin: 20px auto 0 auto;
     text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-  }
+    transition: .4s;
 
-  i {
-    transition: .3s;
-  }
+    span {
+      display: none;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: black;
+    }
 
-  span {
-    padding-left: 16px;
-  }
-
-  a:hover i {
-    color: $color-success;
-  }
-}
-
-/* Section Rules */
-.container {
-  margin: 0 auto;
-
-  h1 {
-    padding: 30px;
-    text-transform: uppercase;
-  }
-  p, span {
-    color: black;
-    font-weight: 400;
-    line-height: 50px;
-    transition: all 0.3s 0s ease;
-  }
-
-  p:hover span {
-    color: $color-warning;
-    font-weight: 600;
+    i {
+      font-size: 50px;
+      color: yellowgreen;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      transform: scale(1);
+      transition: .3s;
+    }
+    
+    i:hover {
+      transform: scale(1.1, 1.1);;
+    }
   }
 }
-
 
 /* Section Game */
 .game {
-  h1 {
-    font-style: italic;
-  }
+  height: 100vh;
 }
-.buttons {
-  border: 1px solid black;
+
+.rules {
+  position: absolute;
+  top: 100vh;
+  right: 0;
+
+  button {
+    
+  }
+  
+}
+
+i {
+  width: 70px;
+  height: 70px;
 }
 .btn {
     width: 100px;
@@ -112,16 +110,6 @@ section {
     background: #db7b27;
 }
 
-.game-title {
-  font-size: 30px;
-  text-transform: uppercase;
-}
-.ready {
-  padding: 10px 0 20px 0;
-  font-weight: 600;
-  font-size: 20px;
-  text-transform: uppercase;
-}
 .message {
   padding: 40px;
   font-size: 20px;
