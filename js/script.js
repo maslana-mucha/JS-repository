@@ -16,18 +16,18 @@ const buttonRock = document.getElementById('button-rock');
 const buttonPaper = document.getElementById('button-paper');
 const buttonScissors = document.getElementById('button-scissors');
 
-buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
-buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
-buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); })
+buttonRock.addEventListener('click', function(){ buttonClicked('rock'); });
+buttonPaper.addEventListener('click', function(){ buttonClicked('paper'); });
+buttonScissors.addEventListener('click', function(){ buttonClicked('scissors'); })
 
 function getMoveName(argMoveId) {
   console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
   if (argMoveId == 1) {
-    return 'kamień';
+    return 'rock';
   } else if (argMoveId == 2) {
-    return 'papier';
+    return 'paper';
   } else if (argMoveId == 3) {
-    return 'nożyce';
+    return 'scissors';
   }
 }
 
@@ -36,26 +36,26 @@ let computerScore = 0;
 
 function displayResult(argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
-  if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
-    printMessage('Wygrywasz!');
+  if (argPlayerMove == 'paper' && argComputerMove == 'rock') {
+    printMessage('You win!');
     playerScore++;
     printMessage(playerScore + ' - ' + computerScore)
-  } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
-    printMessage('Wygrywasz!');
+  } else if (argPlayerMove == 'rock' && argComputerMove == 'scissors') {
+    printMessage('You win!');
     playerScore++;
     printMessage(playerScore + ' - ' + computerScore)
-  } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
-    printMessage('Wygrywasz!');
+  } else if (argPlayerMove == 'scissors' && argComputerMove == 'paper') {
+    printMessage('You win!');
     playerScore++;
     printMessage(playerScore + ' - ' + computerScore)
   } else if (argPlayerMove == argComputerMove) {
-    printMessage('Remis!');
+    printMessage('Tie!');
     printMessage(playerScore + ' - ' + computerScore)
   } else {
-    printMessage('Przegrywasz :(');
+    printMessage('You loose :(');
     computerScore++;
     printMessage(playerScore + ' - ' + computerScore)
   }
-  printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+  printMessage('I played ' + argComputerMove + ', and you played ' + argPlayerMove);
   console.log('wynik ', playerScore, computerScore);
 }

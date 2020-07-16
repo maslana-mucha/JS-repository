@@ -31,42 +31,50 @@ section {
   transform: translate(-50%, -50%);
 }
 
+.introduction h1 {
+  font-size: 38px;
+}
+
 .introduction h2 {
   padding: 12px 0;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: normal;
 }
 
 .introduction h2 > span {
   color: yellowgreen;
+  font-weight: 600;
 }
 
-.introduction a {
-  display: inline-block;
-  margin: 20px auto 0 auto;
+.intro a {
+  display: block;
+  position: absolute;
+  bottom: 25vh;
+  left: 50%;
+  transform: translateX(-50%);
   text-decoration: none;
   transition: .4s;
 }
 
-.introduction a span {
+.intro a span {
   display: none;
   font-size: 20px;
   text-transform: uppercase;
   color: black;
 }
 
-.introduction a i {
+.intro a i {
   font-size: 50px;
   color: yellowgreen;
   width: 60px;
   height: 60px;
   line-height: 60px;
-  transform: scale(1);
+  transform: scale(1.5, 1.5);
   transition: .3s;
 }
 
-.introduction a i:hover {
-  transform: scale(1.1, 1.1);
+.intro a i:hover {
+  transform: scale(1.9, 1.9);
 }
 
 /* Section Game */
@@ -74,23 +82,77 @@ section {
   height: 100vh;
 }
 
-.rules-left {
+.rules {
   position: absolute;
-  top: calc(200vh + 60px);
-  left: calc(100vw + 60px);
+  bottom: -95vh;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid;
+  font-size: 50px;
+  line-height: 80px;
+  transition: .4s;
+  cursor: pointer;
+  background-color: ivory;
 }
 
 .rules-right {
-  position: absolute;
-  top: calc(200vh + 60px);
-  right: calc(100vw + 60px);
+  right: 5vh;
+  color: green;
+  border-color: green;
 }
 
-div.rules > button {
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  background-color: yellowgreen;
+.rules-right i {
+  transition: .2s;
+}
+
+.rules-right span {
+  font-size: 16px;
+}
+
+.rules-left {
+  left: 5vh;
+  color: brown;
+  border-color: brown;
+}
+
+ul {
+  display: none;
+  position: absolute;
+  bottom: -79vh;
+  left: 10vh;
+  list-style: none;
+  font-size: 26px;
+}
+
+ul li {
+  padding: 10px 20px;
+}
+
+.faq {
+  display: none;
+  position: absolute;
+  bottom: -79vh;
+  right: 9vh;
+  font-size: 26px;
+  text-align: left;
+}
+
+.rules:hover {
+  width: 400px;
+  height: 400px;
+}
+
+.rules:hover i {
+  opacity: 0;
+}
+
+.rules:hover ~ ul {
+  display: block;
+}
+
+.rules:hover ~ span {
+  display: block;
 }
 
 .buttons {
