@@ -12,15 +12,14 @@ body {
 }
 
 section {
-  padding: 96px 0;
   background-color: #fff;
 }
 
 /* Section Intro */
 .intro {
   height: 100vh;
-  background-image: url(https://i.postimg.cc/GhqqwmjN/sn-rockpaper.jpg);
-  background-position: center;
+  background-image: url(../images/sn-rockpaper.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -53,7 +52,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .intro a span {
@@ -70,7 +69,7 @@ section {
   height: 60px;
   line-height: 60px;
   transform: scale(1.5, 1.5);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .intro a i:hover {
@@ -91,7 +90,7 @@ section {
   border: 3px solid;
   font-size: 50px;
   line-height: 80px;
-  transition: .4s;
+  transition: 0.4s;
   cursor: pointer;
   background-color: ivory;
 }
@@ -103,7 +102,7 @@ section {
 }
 
 .rules-right i {
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .rules-right span {
@@ -183,7 +182,7 @@ ul li {
   line-height: 90px;
   cursor: pointer;
   transform: scale(1);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .buttons i:hover {

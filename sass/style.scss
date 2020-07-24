@@ -1,27 +1,28 @@
 /* Global */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Montserrat',
-  sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   text-align: center;
 }
+
 section {
-  padding: 96px 0;
   background-color: #fff;
 }
 
 /* Section Intro */
 .intro {
   height: 100vh;
-  background-image: url(https://i.postimg.cc/GhqqwmjN/sn-rockpaper.jpg);
-  background-position: center;
+  background-image: url(../images/sn-rockpaper.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
 }
+
 .introduction {
   position: absolute;
   top: 50%;
@@ -37,11 +38,13 @@ section {
     font-size: 22px;
     font-weight: normal;
   }
+
   h2 > span {
     color: yellowgreen;
     font-weight: 600;
   }
 }
+
 .intro a {
   display: block;
   position: absolute;
@@ -49,7 +52,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
-  transition: .4s;
+  transition: 0.4s;
 
   span {
     display: none;
@@ -65,7 +68,7 @@ section {
     height: 60px;
     line-height: 60px;
     transform: scale(1.5, 1.5);
-    transition: .3s;
+    transition: 0.3s;
   }
 
   i:hover {
@@ -77,6 +80,7 @@ section {
 .game {
   height: 100vh;
 }
+
 .rules {
   position: absolute;
   bottom: -95vh;
@@ -86,27 +90,31 @@ section {
   border: 3px solid;
   font-size: 50px;
   line-height: 80px;
-  transition: .4s;
+  transition: 0.4s;
   cursor: pointer;
   background-color: ivory;
 }
+
 .rules-right {
   right: 5vh;
   color: green;
   border-color: green;
-  
+
   i {
-    transition: .2s;
+    transition: 0.2s;
   }
+
   span {
     font-size: 16px;
   }
 }
+
 .rules-left {
   left: 5vh;
   color: brown;
   border-color: brown;
 }
+
 ul {
   display: none;
   position: absolute;
@@ -119,6 +127,7 @@ ul {
     padding: 10px 20px;
   }
 }
+
 .faq {
   display: none;
   position: absolute;
@@ -136,10 +145,12 @@ ul {
     opacity: 0;
   }
 }
-.rules:hover~ul{
+
+.rules:hover ~ ul {
   display: block;
-} 
-.rules:hover~span {
+}
+
+.rules:hover ~ span {
   display: block;
 }
 
@@ -153,7 +164,7 @@ ul {
   align-content: center;
   cursor: pointer;
   transition: all 0.2s;
-  
+
   i {
     margin: 0 30px;
     font-size: 50px;
@@ -165,16 +176,18 @@ ul {
     line-height: 90px;
     cursor: pointer;
     transform: scale(1);
-    transition: .3s;
+    transition: 0.3s;
   }
-  
+
   i:hover {
     transform: scale(1.1);
   }
+
   i:active {
     transform: scale(1.1);
     background-color: orange;
   }
+
   i:visited {
     background-color: orange;
   }
@@ -187,4 +200,3 @@ ul {
   font-weight: 400;
   text-transform: uppercase;
 }
-
