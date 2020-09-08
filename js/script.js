@@ -30,6 +30,7 @@ function computerMove() {
   return aiMove;
 }
 
+//results and its presentage
 function checkResult(player, ai) {
   if (player == ai) {
     return 'draw';
