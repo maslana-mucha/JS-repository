@@ -86,25 +86,28 @@ section {
   font-size: 36px;
 }
 
-.panel {
-  margin: 20px;
+.panel-box {
+  display: flex;
+  align-items: flex-start;
 }
 
 .panel-left,
 .panel-right {
-  display: inline-block;
-  width: 48%;
-  overflow: hidden;
-  margin: 40px auto 0;
-  text-align: center;
-}
+  flex-basis: 50%;
 
-.panel-left p {
-  font-size: 20px;
-}
+  h3 {
+    margin: 20px 0;
+    font-size: 26px;
+  }
 
-.panel h3 {
-  text-align: center;
+  p {
+    padding: 5px;
+  }
+
+  h4 {
+    padding: 10px;
+    font-size: 20px;
+  }
 }
 
 .select {

@@ -26,11 +26,10 @@ function playerMove() {
 function computerMove() {
   const aiMove =
     playerMoves[Math.floor(Math.random() * playerMoves.length)].dataset.option;
-  console.log(aiMove);
   return aiMove;
 }
 
-//results and its presentage
+//results and its meaning
 function checkResult(player, ai) {
   if (player == ai) {
     return 'draw';
@@ -69,14 +68,22 @@ function publishResults(player, ai, result) {
   }
 }
 
+function endGame() {
+  document.querySelector(`[data-option="${game.playerMove}"]`).style.boxShadow =
+    '';
+  game.playerMove = '';
+  game.aiMove = '';
+}
+
 function playGame() {
   if (!game.playerMove) {
-    console.log('Choose your move!');
+    return alert('Choose your move!');
   }
 
   game.aiMove = computerMove();
   const gameResult = checkResult(game.playerMove, game.aiMove);
   publishResults(game.playerMove, game.aiMove, gameResult);
+  endGame();
 }
 
 playerMoves.forEach((move) => move.addEventListener('click', playerMove));

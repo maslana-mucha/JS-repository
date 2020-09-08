@@ -86,25 +86,34 @@ section {
   font-size: 36px;
 }
 
-.panel {
-  margin: 20px;
+.panel-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
 }
 
 .panel-left,
 .panel-right {
-  display: inline-block;
-  width: 48%;
-  overflow: hidden;
-  margin: 40px auto 0;
-  text-align: center;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
-.panel-left p {
+.panel-left h3,
+.panel-right h3 {
+  margin: 20px 0;
+  font-size: 26px;
+}
+
+.panel-left p,
+.panel-right p {
+  padding: 5px;
+}
+
+.panel-left h4,
+.panel-right h4 {
+  padding: 10px;
   font-size: 20px;
-}
-
-.panel h3 {
-  text-align: center;
 }
 
 .select {
