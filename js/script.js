@@ -1,3 +1,4 @@
+'use strict';
 const gameSummary = {
   numbers: 0,
   wins: 0,
@@ -8,16 +9,49 @@ const gameSummary = {
 const game = {
   playerMove: '',
   aiMove: '',
-  playerMoveHTML: '',
 };
 
 const playerMoves = [...document.querySelectorAll('.select img')];
-console.log(playerMoves);
+const startButton = document.querySelector('.start');
 
-const playerMove = () => {
-  console.log('fuuu');
-};
+//player selection
+function playerMove() {
+  game.playerMove = this.dataset.option;
+  // console.log(game.playerMove);
+  playerMoves.forEach((move) => (move.style.boxShadow = ''));
+  this.style.boxShadow = '0 0 0 4px yellowgreen';
+}
 
-playerMoves.forEach((playerMove) =>
-  playerMove.addEventListener('click', playerMove)
-);
+//computer selection
+function computerMove() {
+  const aiMove =
+    playerMoves[Math.floor(Math.random() * playerMoves.length)].dataset.option;
+  console.log(aiMove);
+  return aiMove;
+}
+
+function checkResult(player, ai) {
+  if (player == ai) {
+    return 'draw';
+  } else if (
+    (player == 'paper' && ai == 'rock') ||
+    (player == 'rock' && ai == 'scissors') ||
+    (player == 'scissors' && ai == 'paper')
+  ) {
+    return 'win';
+  } else {
+    return 'loss';
+  }
+}
+
+function playGame() {
+  if (!game.playerMove) {
+    console.log('Choose your move!');
+  }
+
+  game.aiMove = computerMove();
+  const gameResult = checkResult(game.playerMove, game.aiMove);
+}
+
+playerMoves.forEach((move) => move.addEventListener('click', playerMove));
+startButton.addEventListener('click', playGame);
