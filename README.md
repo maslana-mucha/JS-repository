@@ -1,1 +1,1 @@
-Rock paper scissors or ro-sham-bo is a well known worldwide variation of the Chinese game introduced in the 17th century. You will play against the computer using buttons on the screen. This is also my first JavaScript project.
+Rock paper scissors or ro-sham-bo is a well known worldwide variation of the Chinese game introduced in the 17th century. You will play against the computer using buttons on the screen. This is also my first (bigger) JavaScript project.
