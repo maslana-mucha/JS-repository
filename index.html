@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
 	<title>RockPaperScissors</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<section class="intro">
 		<div class="introduction">
@@ -19,34 +21,48 @@
 		</a>
 	</section>
 	<section class="game" id="game">
-		<h1>Choose the button</h1>
-		<div class="buttons" id="buttons">
-			<i class="fas fa-hand-rock" id="button-rock"></i>
-			<i class="fas fa-hand-paper" id="button-paper"></i>
-			<i class="fas fa-hand-scissors" id="button-scissors"></i>
+		<div class="select">
+			<h1 class="section-title">Choose your move:</h1>
+			<img data-option="paper" class="first" src="images/paper.jpg" alt="" title="paper">
+			<img data-option="rock" src="images/rock.jpg" alt="" title="rock">
+			<img data-option="scissors" src="images/scissors.jpg" alt="" title="scissors">
 		</div>
-		
-		<div class="message" id="messages"></div>
-		<div class="counter" id="result"></div>
-		<div>
-			<div class="rules rules-left">
-				<i class="fas fa-exclamation"></i>
-			</div>
-			<ul>
-				<li>Rock <span>crushes</span> Scissors</li>
-				<li>Paper <span>covers</span> Rock</li>
-				<li>Scissors <span>cuts</span> Paper</li>
-			</ul>
+
+		<button class="start">Let's play!</button>
+
+		<div class="panel-left">
+			<h3>Round result</h3>
+			<p>Your move: <span data-summary="your-choice"></span></p>
+			<p>Computer move: <span data-summary="ai-choice"></span></p>
+			<h2>The Winner: <span data-summary="who-win"></span></h2>
+		</div>
+
+		<div class="panel-right">
+			<h3>Game results</h3>
+			<p class="numbers">Rounds number: <span>0</span></p>
+			<p class="wins">Rounds won: <span>0</span></p>
+			<p class="losses">Rounds lost: <span>0</span></p>
+			<p class="draws">Ties: <span>0</span></p>
+		</div>
+		<div class="rules rules-left">
+			<i class="fas fa-exclamation"></i>
+		</div>
+		<ul>
+			<li>Rock <span>crushes</span> Scissors</li>
+			<li>Paper <span>covers</span> Rock</li>
+			<li>Scissors <span>cuts</span> Paper</li>
+		</ul>
 		</div>
 		<div>
 			<div class="rules rules-right">
 				<i class="fas fa-question"></i>
 			</div>
-			<span class="faq">Each player choose one<br> of three shapes. These<br> shapes are "rock", "paper" <br> and "scissors".</span>
+			<span class="faq">Each player choose one<br> of three shapes. These<br> shapes are "rock", "paper" <br> and
+				"scissors".</span>
 		</div>
-		
+
 	</section>
-	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
+
 </html>
