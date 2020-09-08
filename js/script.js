@@ -3,7 +3,7 @@ const gameSummary = {
   numbers: 0,
   wins: 0,
   losses: 0,
-  ties: 0,
+  draws: 0,
 };
 
 const game = {
@@ -45,6 +45,30 @@ function checkResult(player, ai) {
   }
 }
 
+//result publish
+function publishResults(player, ai, result) {
+  document.querySelector('[data-summary="your-move"]').textContent = player;
+  document.querySelector('[data-summary="ai-move"]').textContent = ai;
+
+  document.querySelector('p.numbers span').textContent = ++gameSummary.numbers;
+
+  if (result === 'win') {
+    document.querySelector('p.wins span').textContent = ++gameSummary.wins;
+    document.querySelector('[data-summary="who-win"]').textContent = 'You!';
+    document.querySelector('[data-summary="who-win"]').style.color =
+      'yellowgreen';
+  } else if (result === 'loss') {
+    document.querySelector('p.losses span').textContent = ++gameSummary.losses;
+    document.querySelector('[data-summary="who-win"]').textContent =
+      'Not you :(';
+    document.querySelector('[data-summary="who-win"]').style.color = 'red';
+  } else {
+    document.querySelector('p.draws span').textContent = ++gameSummary.draws;
+    document.querySelector('[data-summary="who-win"]').textContent = 'Draw!';
+    document.querySelector('[data-summary="who-win"]').style.color = 'orange';
+  }
+}
+
 function playGame() {
   if (!game.playerMove) {
     console.log('Choose your move!');
@@ -52,6 +76,7 @@ function playGame() {
 
   game.aiMove = computerMove();
   const gameResult = checkResult(game.playerMove, game.aiMove);
+  publishResults(game.playerMove, game.aiMove, gameResult);
 }
 
 playerMoves.forEach((move) => move.addEventListener('click', playerMove));
